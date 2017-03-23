@@ -1,0 +1,70 @@
+html {
+  font-size: 20px;
+}
+
+.quote {
+  margin-top: 0.5em;
+}
+
+.quote > span:first-child {
+  font-weight: bold
+}
+
+.quote > span:first-child:after {
+  content:':'
+}
+
+.table_container {
+
+   border-radius: 25px;
+    border: 2px solid #555;
+    padding: 10px; 
+    margin: 10px; 
+    width: 95%;
+    
+    text-align: center;
+}
+
+.add_container {
+
+   border-radius: 25px;
+    /*border: 2px solid #555;*/
+    padding: 10px; 
+    margin: 10px; 
+    width: 500px;
+}
+/*.add_left_col {
+    background: #e8f6fe;
+    
+    margin-right: 200px;
+}
+.add_right_col {
+	width: 200px;
+    float: right;
+}
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.add_left_col {
+    width: 50%;
+    float: left;
+    font-size: 21px;
+    font-weight: bold;
+}
+.add_right_col {
+    width: 50%;
+    float: left;
+}
+
+a.delete_href {
+    color: red;
+    text-decoration:none;
+    text-align: center;
+}
+a.delete_href:hover {
+    color: red;
+    font-size:150%;
+}

@@ -1,0 +1,251 @@
+body {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Quicksand', "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black;
+}
+
+li{
+	margin-bottom: 12px;
+}
+
+form{
+	margin: 12px 0;
+}
+
+hr{
+	border: 1px solid grey;
+}
+
+.app-header{
+	background: #333;
+	color: white;
+	padding: 12px 24px 24px;
+}
+
+.app-header h1{
+	margin-top: 24px;
+}
+
+.app-header.fixed{
+	position: fixed;
+    width: 100%;
+    max-width: 550px;
+    padding: 12px 0;
+}
+
+.app-header.fixed + .main{
+	padding-top: 93px;
+}
+
+.main{
+	margin: 0 12px;
+    min-height: 600px;
+}
+
+.intro{
+	font-size: 14px;
+	text-align: center;
+}
+
+.nav{
+	margin: 12px 0;
+	padding: 0;
+	text-align: center;
+}
+.nav li{
+	display: inline-block;
+	width: 33%;
+	list-style-type: none;
+}
+.nav li a{
+	display: block;
+	padding: 12px;
+}
+
+.centre{
+	text-align: center !important;
+}
+.left{
+	text-align: left !important;
+}
+
+.menu{
+	padding-left: 0;
+    margin: 12px 0;
+}
+
+.menu__item{
+	list-style-type: none;
+	text-align: center;
+}
+
+.menu__item a{
+	display: block;
+	padding: 12px 24px;
+	background: #ebebeb;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.menu__item a:hover{
+	background: green;
+	color: white;
+}
+
+.green{
+	background: green !important;
+	color: white !important;
+	border-bottom: 3px solid darkgreen;
+    border-radius: 6px;
+}
+
+h1, h2{
+	font-size: 24px;
+	margin-top: 48px;
+}
+
+button{
+	width: 100%;
+	background: #ebebeb;
+	border: 0;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    font-family: 'Quicksand', cursive;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.job-history,
+.leaderboard{
+  	margin: 0 auto;
+  	padding-left: 0;
+}
+
+.job-history{    
+	margin: 3px -12px;
+	border-top: 1px solid #ebebeb;  
+	/*  
+	max-height: 220px;
+    overflow-y: scroll;
+    */
+}
+
+.job-history__item,
+.leaderboard__item{
+  	list-style-type: none;
+}
+
+.job-history__item{
+	font-size: 14px;
+	padding: 12px;
+	margin: 0;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.job-history__item .date{
+	float: right;
+	color: #AAA;
+}
+
+.job-history__item:last-child(){
+	border: none;
+}
+
+.job-history__item.milestone{
+	background: url(/star3.png) no-repeat 97% 6px;
+    background-size: 29px;
+    font-weight: bold;
+    color: #e59700;
+}
+
+
+table{
+	width: 100%;
+	font-size: 14px;
+    border-collapse: collapse;
+}
+table td{
+	padding: 12px 6px;
+}
+table tr td{
+	border-bottom: 1px solid #ebebeb;
+}
+
+.users{
+	display: flex;
+  	justify-content: space-between;
+    margin: 12px -6px 0;
+}
+.user{
+	flex: 1;
+    text-align: center;
+    padding: 12px;
+    background: url(/star3.png) no-repeat 50% -7px;
+    background-size: 100px;
+}
+
+.user .points{
+    font-size: 28px;
+    margin: 18px 0 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user .name{
+    padding-top: 12px;
+}
+
+.back-button{
+	display: block;
+	text-align: center;
+    width: 70px;
+    height: 70px;
+    background: #ebebeb;
+    margin: 48px auto;
+    border-radius: 50px;
+    line-height: 3.8;
+    text-decoration: none;
+    font-weight: bold;
+}
+.stars{
+	text-align: center;
+    margin: 24px 0;
+}
+.star{    
+    width: 28px;
+}
+.star:first-child(){
+    margin-right: 4px;	
+}
+
+.scores{
+    margin: 0 -12px;
+    background: #ebebeb;
+    padding: 3px 0;
+}
+
+.scores h2{
+    margin: 0 0 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #AAA;
+    padding-top: 12px;
+}
+
+.heading{
+	margin-top: 48px;
+	font-weight: bold;
+	font-size: 24px;
+}

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    .app-header
+        h1.centre Admin
+    .main
+        h2.centre Actions
+        ul.menu
+            li.menu__item
+                a(href='/') Switch to a different player
+            li.menu__item
+                a(href='/delete/all') Delete all events
+            li.menu__item
+                a(href='/load-defaults') Load default jobs and users
+        if events[0]
+            h2.centre Delete specific events
+            table
+                for event in events
+                    - var eventDate = Sugar.Date.format(event.eventDate, '%x %X')
+                    - var userName = _.find(users, {userId: event.userId}).userName
+                    - var jobTitle = _.find(jobs, {jobId: event.eventId}).jobTitle
+                    tr
+                        td #{userName} 
+                        td #{jobTitle} 
+                        td #{eventDate}
+                        td
+                            a(href='/delete/event-' + event._id) Delete

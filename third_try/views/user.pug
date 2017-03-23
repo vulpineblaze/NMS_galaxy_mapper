@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    .app-header
+        h1.centre Jobby
+        p.intro Do jobs. Earn stars.
+    .main
+        .scores
+            h2.centre This week
+            .users
+                for user in users
+                    .user
+                        .points= user.userPointsThisWeek
+                        .name= user.userName                       
+        ul.menu
+                li.menu__item                  
+                    a.green(href='/user-' + currentUserId + '/job-list' ) Log a job
+        if events[0]
+            ul.job-history
+                for event in events
+                    - var eventDate = Sugar.Date.relative(event.eventDate)
+                    - var userName = _.find(users, {userId: event.userId}).userName
+                    - var eventType = event.eventType
+
+                    if event.eventType == "milestone"
+                        - var eventTitle = "has earned " + event.eventId + " stars so far!"
+                        li.job-history__item.milestone #{userName} #{eventTitle}
+
+                    else
+                        - var eventTitle = _.find(jobs, {jobId: event.eventId}).jobTitle
+                        li.job-history__item #{userName} #{eventTitle}
+                            span.date #{eventDate}
+
+    - var currentUser = _.find(users, {userId: currentUserId});
+    if currentUser.userAdmin
+        br
+        hr
+        ul.nav
+            li
+                a(href='/admin') Admin

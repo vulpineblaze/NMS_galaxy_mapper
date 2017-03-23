@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .app-header.fixed
+        h1.centre What did you do?
+    .main
+        ul.menu
+            each job in jobs
+                li.menu__item.left              
+                    a(href='/user-' + user.userId + '/job-' + job.jobId ) I #{job.jobTitle} 
+
+        a.back-button(href='/user-' + user.userId) Back

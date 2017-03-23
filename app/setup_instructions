@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# node already installed
+
+npm install -g express
+sudo npm install -g express-generator
+
+
+
+# generate fresh project called 'app'
+ # express --sessions --css less --hogan app
+
+
+   # install dependencies:
+   #   $ cd app && npm install
+
+   # run the app:
+   #   $ DEBUG=app:* npm start
+
+   # mondodb
+   sudo apt-get install mongodb-org
+# sudo service mongod stop ; sudo service mongod restart
+
+npm install  mongodb
+
+ npm update 
+ npm update node
+npm install connect
+
+
+
+
+
+
+
+
+
+
+
+
+

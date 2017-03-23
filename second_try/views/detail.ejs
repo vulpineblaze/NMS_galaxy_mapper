@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NMS Galaxy Mapper</title>
+  <link rel="stylesheet" href="styles.css">
+<!-- 
+<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">  
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+
+
+
+
+<script>
+  $(document).ready( function () {
+    $('#table_id').DataTable({
+      searching: true,
+      ordering: true
+    });
+} );
+</script>
+ -->
+</head>
+
+
+<body>
+  <h1>NMS Galaxy Mapper</h1>
+<P>Actual front-end coming SOON(tm).</P> 
+<P>Actual domain name coming SOON(tm). Nomans.skygin.net is a temporary home.</P>
+<P>This is a proof-of-concept to see if anyone is interested before investing more time.</P>
+
+<h1>Details Page for:  <%= quotes[0].name %></h1>
+<div class="table_container">
+  <table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Race</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= quotes[0].user %></td>
+        <td><%= quotes[0].id %></td>
+        <td><%= quotes[0].name %></td>
+        <td><%= quotes[0].class %></td>
+        <td><%= quotes[0].race %></td>
+        <td><%= quotes[0].tags %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="add_container">
+  <h2>Edit this Star System</h2>
+
+
+
+
+    <div class="add_left_col">
+       <br> 
+      User  <br>
+      Star ID  <br>
+      Current Star Name  <br>
+      Star Class  <br>
+      Occupying Race <br>
+      What was interesting? 
+
+    </div>
+
+
+    <div class="add_right_col">
+
+      <form action="/update-<%= quotes[0].guid %>" method="POST" >
+        <button type="submit">Submit</button><br>
+          <input type="text" placeholder="u/user_name/" name="user" value="<%= quotes[0].user %>"><br>
+          <input type="text" placeholder="0000:0000:0000:0000" name="id" value="<%= quotes[0].id %>"><br>
+          <input type="text" placeholder="[HUB-X-00] coolname [stuff]" name="name" value="<%= quotes[0].name %>"><br>
+          <input type="text" placeholder="F9pf" name="class" value="<%= quotes[0].class %>"><br>
+          <input type="text" placeholder="Gek" name="race" value="<%= quotes[0].race %>"><br>
+          <input type="text" placeholder="Ce, Te, Sp, DynRes, Lush, Diplo" name="tags" value="<%= quotes[0].tags %>">
+      </form>
+
+    </div>
+
+  
+</div>
+
+
+<!-- 
+
+  <div>
+    <h2>update</h2>
+    <button id="update"> Update </button>
+  </div>
+
+  <script src="main.js"></script> -->
+
+</body>
+</html>

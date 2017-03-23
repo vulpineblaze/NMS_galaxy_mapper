@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    .app-header
+        h1.centre Choose a player
+    .main
+        ul.menu
+            each user in users
+                li.menu__item                    
+                    a(href='/user-' + user.userId ) #{user.userName}

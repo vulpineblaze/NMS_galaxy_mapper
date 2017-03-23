@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .app-header
+        h1.centre Congratulations!
+    .main
+        h2.centre You have earned
+        .users
+            .user
+                .points= milestone
+                .heading stars 
+
+        ul.menu
+                li.menu__item                    
+                    a.green(href='/user-' + userId ) Cool!

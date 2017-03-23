@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    mixin hiddenFields
+        input(type="hidden", name="userId", value=user.userId)
+        input(type="hidden", name="jobId", value=job.jobId)
+    .app-header
+        h1.centre When did you do it?
+    .main
+        h1.centre I #{job.jobTitle}
+        br
+
+        form(name="addjob", method="post", action="/add-job")
+            + hiddenFields
+            input(type="hidden", name="jobDate", value=Sugar.Date.create('now'))
+            button.green(type="submit") Just now
+        form(name="addjob", method="post", action="/add-job")
+            + hiddenFields
+            input(type="hidden", name="jobDate", value=Sugar.Date.create('today'))
+            button(type="submit") Earlier today
+        form(name="addjob", method="post", action="/add-job")
+            + hiddenFields
+            input(type="hidden", name="jobDate", value=Sugar.Date.create('yesterday'))
+            button(type="submit") Yesterday
+        a.back-button(href='/user-' + user.userId + '/job-list') Back
