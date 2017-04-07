@@ -10,8 +10,10 @@ var the_port = 3000;
 // var the_port = 80;
 
 var db
-var db_link = "mongodb://nms_crud_user:nms_crud@ds133340.mlab.com:33340/nms_crud_db"
-MongoClient.connect(db_link, (err, database) => {
+var configDB = require('./config/database.js');
+
+
+MongoClient.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
   app.listen(process.env.PORT || the_port, "127.0.0.1", () => {
